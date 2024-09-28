@@ -18,18 +18,18 @@ jobs:
       # Build and push each image
       - name: Build and Push app
         run: |
-          docker pull jaydenooi28/django1:latest || true
-          docker build --tag jaydenooi28/django1:latest ./Docker-files/app
-          docker push jaydenooi28/django1:latest
+          docker pull jaydenooi28/vprofileapp:latest || true
+          docker build --tag jaydenooi28/vprofileapp:latest ./Docker-files/app
+          docker push jaydenooi28/vprofileapp:latest
 
       - name: Build and Push db
         run: |
-          docker pull jaydenooi28/django2:latest || true
-          docker build --tag jaydenooi28/django2:latest ./Docker-files/db
-          docker push jaydenooi28/django2:latest
+          docker pull jaydenooi28/vprofiledb:latest || true
+          docker build --tag jaydenooi28/vprofiledb:latest ./Docker-files/db
+          docker push jaydenooi28/vprofiledb:latest
 
       - name: Build and Push web
         run: |
-          docker pull jaydenooi28/django3:latest || true
-          docker build --tag jaydenooi28/django3:latest ./Docker-files/web
-          docker push jaydenooi28/django3:latest
+          docker pull jaydenooi28/vprofileweb:latest || true
+          docker build --tag jaydenooi28/vprofileweb:latest ./Docker-files/web
+          docker push jaydenooi28/vprofileweb:latest
